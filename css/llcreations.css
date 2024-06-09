@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-color: #f3eff5;
+}
+
+/* DEFAULT  */
+
+h7 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+.heading {
+    height: 100px;
+    width: 150px;
+    filter: brightness(130%);
+}
+
+.midhead {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.midhead img {
+    width: 70%;
+}
+
+.right {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    margin: 5%;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    background-color: gray;
+    width: 100%;
+    height: 100px;
+    z-index: -1;
+    opacity: 0.6;
+
+}
+
+/* THEME */
+body {
+    transition: background-color 0.4s ease;
+}
+
+.themeposition{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 18%;
+}
+
+.theme-slide-toggle {
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+
+.theme-slide-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.theme-slide-toggle-label {
+    display: block;
+    position: absolute;
+    width: 36%;
+    height: 100%;
+    background-color: #ccc;
+    border: 2px solid darkgrey;
+    border-radius: 15px;
+    cursor: pointer;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.theme-slide-toggle-label::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    background-image: url('https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm01MTAtZWxlbWVudC00OS1sMHZwemFzai5wbmc.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.theme-slide-toggle input[type="checkbox"]:checked+.theme-slide-toggle-label::before {
+    transform: translateX(30px) translateY(-50%);
+}
+.theme-slide-toggle input[type="checkbox"]:checked+.theme-slide-toggle-label::before {
+    background-image: url('https://www.freeiconspng.com/uploads/moon-icon-32.png'); /* Button image for dark theme */
+}
+
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-theme .theme-slide-toggle-label {
+    background-color: #555;
+}
+
+.dark-theme .theme-slide-toggle-label::before {
+    background-color: #333;
+}
+
+
+/* INTROLINE */
+.introline h2 {
+    margin: 2%;
+    display: inline;
+    position: relative;
+    animation: movement;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes movement {
+    0% {
+        left: 0%;
+    }
+
+    50% {
+        left: 70%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+/* MID SECTION */
+.mid {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 34px;
+    position: static;
+}
+
+.mid::before {
+    content: "";
+    position: absolute;
+    border: 4px solid white;
+    width: 90%;
+    height: 280px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 34px;
+    z-index: -1;
+    animation: glow;
+    animation-duration: 1ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 1.5s;
+}
+
+@keyframes glow {
+    from {
+        border: 4px solid white;
+    }
+
+    to {
+        border: 4px solid red;
+    }
+}
+
+.fpart {
+    width: 47%;
+    margin: 2%;
+    height: 250px;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation-name: entry;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 221;
+    right: 100%;
+}
+
+
+
+.spart {
+    padding: 1%;
+    width: 47%;
+    margin: 2%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation-name: lentry;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes lentry {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+.subpart1 {
+    width: 40%;
+    position: relative;
+}
+
+.subpart2 {
+    padding: 2%;
+    width: 70%;
+}
+
+@keyframes entry {
+    from {
+        right: 100%;
+    }
+
+    to {
+        right: 0%;
+    }
+}
+
+
+.subpart1 img {
+    height: 60%;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+.aboutinfo {
+    text-align: justify;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+
+/* DISPLAY SECTION */
+.container {
+    margin: 1.5%;
+}
+.part1{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+}
+.part1 img{
+    width: 14%;
+    margin:1.5%;
+    border: 8px solid black;
+    transition: 1s;
+}
+
+.part1 img:hover{
+    transform:scale(2,2);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    background-image: url('https://media.istockphoto.com/id/1286354786/vector/dark-prism-textured-abstract-background.jpg?s=612x612&w=0&k=20&c=lJiYScAyV7Iqn5FKdxMYCuntLO0ljQkR_oEftweNjmE=');
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 100%;
+    width: 97%;
+    z-index: -1;
+    opacity: 0.3;
+
+}
+
+
+.border{
+    border: 2px solid red;
+        margin: 1.5%;
+}
+/* LAST LINE */
+.copy {
+    background-color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
