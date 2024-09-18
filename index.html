@@ -8,6 +8,14 @@
     <title>LL Creations</title>
     <link rel="stylesheet" href="css/llcreations.css">
     <link rel="stylesheet" media="screen and (max-width: 820px)" href="css/llcreationsphone.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
 </head>
 
 <body>
@@ -43,27 +51,26 @@
 
 
     <!-- INTRO LINE -->
-    <div class="introline">
-        <h2>Looking for a Graphic Designer ?</h2>
-    </div>
+        <h2><marquee scrollamount="20" direction="right">Looking for a Graphic Designer ?</marquee></h2>
 
     <!-- MID SECTION -->
     <section class="mid">
-        <div class="fpart">
-            <div class="subpart1">
+        <div class="fpart animate__animated animate__bounceInLeft animate__slow">
+            <div class="subpart1 animate__animated animate__bounceInLeft animate__slow">
                 <img src="images/compressed-images/lucky.jpg">
 
             </div>
-            <div class="subpart2">
+            <div class="subpart2 animate__animated animate__bounceInLeft animate__slower">
                 <p>
                     <h7>Lucky Kashyap</h7>
-                </p><!-- defined h7 size 3rem + bold-->
+                    <!-- defined h7 size 3rem + bold-->
+                </p>
                 <p class="aboutinfo"> (Graphic Designer)</p>
                 <p class="aboutinfo">5+ Years of Experinece</p>
                 <p class="aboutinfo">100+ Happy and Satisfied Clients</p>
             </div>
         </div>
-        <div class="spart">
+        <div class="spart  animate__animated animate__bounceInRight animate__slower	">
             <p class="center">
                 <h7>OUR SERVICES</h7>
             </p>
@@ -81,38 +88,29 @@
     <!-- heading -->
 
     <div class="container">
-        <p class="center"><h7>Our Works</h7></p>
+        <p class="center" data-aos="fade-up"><h7>Our Works</h7></p>
         
-        <div class="part1">
-            <img src="images/compressed-images/2 page copy.jpg" alt="">
-            <img src="images/compressed-images/2display.jpg" alt="">
-            <img src="images/compressed-images/3 page.jpg" alt="">
-            <img src="images/compressed-images/00display.jpg" alt="">
+        <div class="part1" >
+            <img data-aos="fade-up"   data-aos-easing="linear"
+        data-aos-duration="1500" src="images/compressed-images/2 page copy.jpg" alt="">
+            <img data-aos="fade-up"   data-aos-easing="linear"
+        data-aos-duration="1500" src="images/compressed-images/2display.jpg" alt="">
+            <img data-aos="fade-up"   data-aos-easing="linear"
+        data-aos-duration="1500" src="images/compressed-images/3 page.jpg" alt="">
+            <img data-aos="fade-up"   data-aos-easing="linear"
+        data-aos-duration="1500" src="images/compressed-images/00display.jpg" alt="">
         </div>
         <div class="part1">
-            <img src="images/compressed-images/4display.jpg" alt="">
-            <img src="images/compressed-images/5display.jpg" alt="">
-            <img src="images/compressed-images/6display.jpg" alt="">
-            <img src="images/compressed-images/7display.jpg" alt="">
+            <img data-aos="fade-up"   data-aos-easing="linear"
+        data-aos-duration="1500" src="images/compressed-images/4display.jpg" alt="">
+            <img data-aos="fade-up"   data-aos-easing="linear"
+        data-aos-duration="1500" src="images/compressed-images/5display.jpg" alt="">
+            <img data-aos="fade-up"   data-aos-easing="linear"
+        data-aos-duration="1500" src="images/compressed-images/6display.jpg" alt="">
+            <img data-aos="fade-up"   data-aos-easing="linear"
+        data-aos-duration="1500" src="images/compressed-images/7display.jpg" alt="">
         </div>
     </div>
-
-    <!-- <div>
-        Tools and SKills
-    </div> -->
-
-
-    <!-- GET IN TOUCH -->
-
-    <!-- <div class="center border">
-        <p>
-        <h2>GET IN TOUCH</h2>
-        </p>
-        
-        <a href="" target="_blank">
-            <img src="images/whatsapplogo.png">
-        </a>
-    </div> -->
 
     <!-- LAST LINE -->
 
@@ -120,6 +118,10 @@
 
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
